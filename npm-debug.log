@@ -1,0 +1,45 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'server' ]
+2 info using npm@3.8.9
+3 info using node@v6.2.0
+4 verbose run-script [ 'preserver', 'server', 'postserver' ]
+5 info lifecycle BlogSPA@~preserver: BlogSPA@
+6 silly lifecycle BlogSPA@~preserver: no script for preserver, continuing
+7 info lifecycle BlogSPA@~server: BlogSPA@
+8 verbose lifecycle BlogSPA@~server: unsafe-perm in lifecycle true
+9 verbose lifecycle BlogSPA@~server: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/home/juan/projects/dreamlines/node_modules/.bin:/usr/local/bin:/usr/local/heroku/bin:/home/juan/.rvm/gems/ruby-2.2.1/bin:/home/juan/.rvm/gems/ruby-2.2.1@global/bin:/home/juan/.rvm/rubies/ruby-2.2.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/juan/.rvm/bin:/home/juan/SDK/android-sdk-linux/platform-tools:/home/juan/SDK/android-sdk-linux/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/.rvm/bin:/usr/bin/.rvm/gems:/home/juan/.rvm/bin
+10 verbose lifecycle BlogSPA@~server: CWD: /home/juan/projects/dreamlines
+11 silly lifecycle BlogSPA@~server: Args: [ '-c', 'node ./node_modules/jsonplaceholder/index.js' ]
+12 silly lifecycle BlogSPA@~server: Returned: code: 1  signal: null
+13 info lifecycle BlogSPA@~server: Failed to exec server script
+14 verbose stack Error: BlogSPA@ server: `node ./node_modules/jsonplaceholder/index.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:245:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:850:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
+15 verbose pkgid BlogSPA@
+16 verbose cwd /home/juan/projects/dreamlines
+17 error Linux 3.19.0-59-generic
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "server"
+19 error node v6.2.0
+20 error npm  v3.8.9
+21 error code ELIFECYCLE
+22 error BlogSPA@ server: `node ./node_modules/jsonplaceholder/index.js`
+22 error Exit status 1
+23 error Failed at the BlogSPA@ server script 'node ./node_modules/jsonplaceholder/index.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the BlogSPA package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node ./node_modules/jsonplaceholder/index.js
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs BlogSPA
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls BlogSPA
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
