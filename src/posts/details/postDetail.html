@@ -1,0 +1,12 @@
+<div class="">
+  <h2>{{post.title}}</h2>
+  <p>
+    {{post.description}}
+  </p>
+  <p ng-repeat="comment in post.comments">
+    {{comment}}
+  </p>
+</div>
+<div>
+  <a href="#/posts">&lt Back post List</a>
+</div>

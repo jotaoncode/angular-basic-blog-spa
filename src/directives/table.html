@@ -1,0 +1,15 @@
+<div ng-repeat="item in content">
+  <div class="item-title">
+    {{item.title}}
+  </div>
+  <div class="item-details">
+    {{item.comments}}
+  </div>
+  <div class="item-options">
+    <div type="button" ng-repeat="option in options" name="button">
+      <button type="button" name="button" ng-if="option.isButton" ng-click="option.click(item.id)">
+        {{option.name}}
+      </button>
+    </div>
+  </div>
+</div>

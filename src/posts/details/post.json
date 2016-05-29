@@ -1,0 +1,5 @@
+module.exports = {
+  "description": "Post description",
+  "title": "Title post",
+  "comments": ["One comment", "second comment"]
+};

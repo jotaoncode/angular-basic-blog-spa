@@ -1,0 +1,21 @@
+.table-directors {
+  width: 100%;
+  .table-header {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    th {
+      border-bottom: 1px solid #ddd;
+      font-size: 1.2em;
+    }
+  }
+  .director-attr {
+    padding: 10px;
+    cursor: pointer;
+  }
+  tbody {
+    tr:hover {
+      color: #3E3ECA;
+    }
+  }
+}
