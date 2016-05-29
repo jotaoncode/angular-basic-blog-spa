@@ -5,6 +5,9 @@ function authService($localForage) {
     saveSession: function (userName){
       return $localForage.setItem(localDB, userName);
     },
+    logOut: function () {
+      return $localForage.removeItem(localDB);
+    },
     getSession: function () {
       return $localForage.getItem(localDB);
     }

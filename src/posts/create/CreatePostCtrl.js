@@ -1,4 +1,4 @@
-function CreatePostCtrl ($scope, $location) {
+function CreatePostCtrl ($scope, $location, postsService) {
   $scope.title = "";
   $scope.description = "";
 
@@ -7,11 +7,11 @@ function CreatePostCtrl ($scope, $location) {
   }
   $scope.save = function () {
     if (isvalid()) {
-      alert('saving post');
+
     } else {
       alert('please correct the form');
     }
   };
 }
 
-angular.module('posts').controller('CreatePostCtrl', ['$scope', '$location', CreatePostCtrl]);
+angular.module('posts').controller('CreatePostCtrl', ['$scope', '$location', 'postsService', CreatePostCtrl]);

@@ -1,2 +1,3 @@
 angular.module('blog-ui', []);
-require('./mdTable');
+require('./lists/simpleList');
+require('./headers/simpleHeader');

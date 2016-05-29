@@ -8,6 +8,9 @@ var login = fs.readFileSync(__dirname + '/login/login.html', 'utf8');
 var postDetail = fs.readFileSync(__dirname + '/posts/details/postDetail.html', 'utf8');
 var createPost = fs.readFileSync(__dirname + '/posts/create/newPost.html', 'utf8');
 
+require('./directives/uiBlog');
+require('./services/blogCore');
+
 /**
  * Blog application
  */
@@ -17,6 +20,7 @@ angular.module('Blog', [
   'LocalForageModule',
   'login',
   'posts',
+  'blog-ui',
   'blog-core'
 ]).config(function ($routeProvider) {
   function checkLoggedInUser (authService, $q, $location) {
@@ -45,15 +49,20 @@ angular.module('Blog', [
   })
   .when('/posts/create', {
     controller: 'CreatePostCtrl',
-    template: createPost
+    template: createPost,
+    resolve: {
+      checkLoggedInUser: ['authService', '$q', '$location', checkLoggedInUser]
+    }
   })
   .when('/posts/:post', {
     controller: 'PostDetail',
-    template: postDetail
-  });
+    template: postDetail,
+    resolve: {
+      checkLoggedInUser: ['authService', '$q', '$location', checkLoggedInUser]
+    }
+  })
+  .otherwise('/');
 });
-require('./directives/uiBlog');
-require('./services/blogCore');
 
 require('./posts/PostsCtrl');
 require('./posts/details/PostDetailCtrl');
