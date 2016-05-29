@@ -1,7 +1,7 @@
-var post = require('./post.json');
-
-function PostDetail($scope) {
-  $scope.post = _.clone(post);
-  $scope.post.dob = moment(post.dob).format('L');
+function PostDetail($scope, postsService, commentsService, $q) {
+  $q.all([postsService.get(1), commentsService.query()]).then(function (apiResults) {
+    $scope.post = apiResults[0].data;
+    $scope.comments = apiResults[1].data;
+  });
 }
-angular.module('posts').controller('PostDetail', ['$scope', PostDetail]);
+angular.module('posts').controller('PostDetail', ['$scope', 'postsService', 'commentsService', '$q', PostDetail]);

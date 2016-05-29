@@ -1,15 +1,20 @@
-<div ng-repeat="item in content">
+<div ng-repeat="item in content" class="simple-list">
   <div class="item-title">
     {{item.title}}
   </div>
-  <div class="item-details">
-    {{item.comments}}
-  </div>
-  <div class="item-options">
-    <div type="button" ng-repeat="option in options" name="button">
-      <button type="button" name="button" ng-if="option.isButton" ng-click="option.click(item.id)">
-        {{option.name}}
-      </button>
+  <div class="list-options"  layout="row" layout-align="space-between center">
+    <div class="item-details">
+      <md-chips>
+        <md-chip>
+          {{item.comments}}
+        </md-chip>
+      </md-chips>
+
+    </div>
+    <div class="item-options">
+      <div type="button" ng-repeat="option in options" name="button">
+        <md-button ng-if="option.isButton" ng-click="option.click(item.id)" class="md-raised"> {{option.name}} </md-button>
+      </div>
     </div>
   </div>
 </div>

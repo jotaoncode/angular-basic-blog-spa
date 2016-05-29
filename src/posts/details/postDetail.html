@@ -3,9 +3,11 @@
   <p>
     {{post.description}}
   </p>
-  <p ng-repeat="comment in post.comments">
-    {{comment}}
-  </p>
+  <div ng-repeat="comment in comments">
+    <span>{{comment.name}}</span>
+    <span>{{comment.email}}</span>
+    <span>{{comment.body}}</span>
+  </div>
 </div>
 <div>
   <a href="#/posts">&lt Back post List</a>

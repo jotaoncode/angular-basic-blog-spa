@@ -1,2 +1,4 @@
-<span>{{user}}</span>
-<button type="button" name="button" ng-repeat="option in options" ng-click="option.click()">{{option.name}}</button>
+<div class="simple-header" layout="row" layout-align="end center">
+  <span class="user-name">{{user}}</span>
+  <md-button type="button" class="md-accent md-raised md-hue-1" ng-repeat="option in options" ng-click="option.click()">{{option.name}}</md-button>
+</div>
