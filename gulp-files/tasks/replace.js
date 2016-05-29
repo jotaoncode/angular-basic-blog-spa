@@ -2,7 +2,7 @@ var gulp = require('gulp'),
   _ = require('lodash'),
   environment      = require('yargs').argv._[0] || 'default',
   pathsConfig  = require('../config'),
-  urlsConfig = require('../../configs/photo-sticker-config.json'),
+  urlsConfig = require('../../configs/dreamlines-config.json'),
   replaceValues  = require('gulp-replace');
 
 gulp.task('replace', ['browserify'], function () {

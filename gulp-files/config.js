@@ -1,6 +1,6 @@
 var dest = "./dist",
     src = './src',
-    appConfig = require('../configs/photo-sticker-config.json');
+    appConfig = require('../configs/dreamlines-config.json');
 
 /**
  * Main configuration for gulp.

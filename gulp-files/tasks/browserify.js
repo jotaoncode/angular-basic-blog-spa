@@ -16,7 +16,7 @@ var gulp = require('gulp'),
   environment = require('yargs').argv._[0] || 'default',
   _ = require('lodash'),
   appConfig = require('../config'),
-  urlConfig = require('../../configs/photo-sticker-config.json'),
+  urlConfig = require('../../configs/dreamlines-config.json'),
   config = require('../config').browserify;
 
 
