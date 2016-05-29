@@ -1,8 +1,8 @@
 function PostsCtrl ($scope, $location, postsService, authService) {
 
-  postsService.query().then(function (response) {
-    if (response[1] === 200) {
-      $scope.content = response[0];
+  postsService.query().then(function (response, status) {
+    if (response.status === 200) {
+      $scope.content = response.data;
       $scope.postsOptions = [{
         isButton: true,
         name: 'details',

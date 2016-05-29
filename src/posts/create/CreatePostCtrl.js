@@ -6,8 +6,14 @@ function CreatePostCtrl ($scope, $location, postsService) {
     return true;
   }
   $scope.save = function () {
-    if (isvalid()) {
-
+    if (isValid()) {
+      postsService.create({
+        title: $scope.title,
+        body: $scope.descrition,
+        userId: 1
+      }).then(function (results) {
+        alert('correctly saved');
+      });
     } else {
       alert('please correct the form');
     }

@@ -8,7 +8,7 @@ function commentsService($http) {
     put: function (post) {
       return $http.put(baseUrl + 'comments', post);
     },
-    post: function (post) {
+    create: function (post) {
       return $http.put(baseUrl + 'comments', post);
     }
   };
