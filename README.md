@@ -12,6 +12,42 @@ A company wants to help employees to create posts by creating a system that allo
 
 It will have a login with only the user name of the employee.
 
+## Installation
+
+$ npm install
+
+## Implementation
+
+As developer:
+
+This is to run server locally, runs on 3000 port
+
+$ npm run server
+
+This is to run gulp with watch, fallbacks to 3001 port, it is important to run first server then gulp because server has no fallback
+
+$ gulp
+
+## Improvements
+
+- Adding environments by configuration.
+- Add replace task to gulp
+- Apply clear task to gulp.
+- Minify app code, it is only minifying vendors.
+
+## Publication site
+
+There is a publication on this here:
+
+http://jotaoncode.herokuapp.com/angular-spa-blog/
+
+
+## Documentation
+
+Documentation related to code distribution here.
+
+http://localhost:4000/blog/news/2016/05/29/angular-code-distribution/
+
 ## Contributors
 
 Juan José García.
