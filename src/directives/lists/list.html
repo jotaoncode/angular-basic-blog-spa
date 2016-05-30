@@ -9,7 +9,6 @@
           {{item.comments}}
         </md-chip>
       </md-chips>
-
     </div>
     <div class="item-options">
       <div type="button" ng-repeat="option in options" name="button">
@@ -17,4 +16,7 @@
       </div>
     </div>
   </div>
+</div>
+<div ng-if="!content" class="error">
+  No results at the moment. Please try later.
 </div>
