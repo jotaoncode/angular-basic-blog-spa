@@ -1,4 +1,10 @@
 {
   "api": "",
-  "version": "0.1"
+  "version": "0.1",
+  "development": {
+    "api": "http://localhost:3000/"
+  },
+  "production": {
+    "api": "http://jsonplaceholder.typicode.com/"
+  }
 }
