@@ -46,7 +46,7 @@ http://jotaoncode.herokuapp.com/angular-spa-blog/
 
 Documentation related to code distribution here.
 
-http://localhost:4000/blog/news/2016/05/29/angular-code-distribution/
+http://jotaoncode.com/blog/news/2016/05/29/angular-code-distribution/
 
 ## Contributors
 
