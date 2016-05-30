@@ -1,5 +1,5 @@
 function PostsCtrl ($scope, $location, postsService, authService) {
-
+  $scope.loading = true;
   postsService.query().then(function (response, status) {
     if (response.status === 200) {
       $scope.content = response.data;
@@ -11,6 +11,7 @@ function PostsCtrl ($scope, $location, postsService, authService) {
         }
       }];
     }
+    $scope.loading = false;
   }, function (err) {
     console.log(err);
   });

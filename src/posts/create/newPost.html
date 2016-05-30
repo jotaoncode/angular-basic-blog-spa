@@ -18,7 +18,7 @@
     <md-button class="md-raised md-warn" ng-href="#/posts">
       <md-icon>keyboard_arrow_left</md-icon>
     </md-button>
-    <md-button class="md-raised md-primary" ng-click="save()">
+    <md-button class="md-raised md-primary" ng-click="save()" ng-disabled="!title || !description">
       Save
     </md-button>
   </div>

@@ -9,7 +9,8 @@ var ListDirective = function () {
     scope: {
       options: "=",
       content: "=",
-      details: "@"
+      details: "@",
+      loading: "="
     }
   };
 };

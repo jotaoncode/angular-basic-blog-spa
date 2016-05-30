@@ -1,14 +1,30 @@
 <div class="">
-  <h2>{{post.title}}</h2>
-  <p>
-    {{post.description}}
+  <h2>Post: {{post.title}}</h2>
+  <p class="postDescription">
+    Description:
   </p>
-  <div ng-repeat="comment in comments">
-    <span>{{comment.name}}</span>
-    <span>{{comment.email}}</span>
-    <span>{{comment.body}}</span>
+  <p>
+    {{post.body}}
+  </p>
+  <h2>Comments</h2>
+  <div ng-repeat="comment in comments" class="comment">
+    <div layout="row" layout-align="space-between center" class="title-comment">
+      <div class="name">
+        <span class="description">Subject: </span> {{comment.name}}
+      </div>
+      <div class="email">
+        {{comment.email}}
+      </div>
+    </div>
+    <div class="body">{{comment.body}}</div>
   </div>
 </div>
-<div>
-  <a href="#/posts">&lt Back post List</a>
+<div ng-if="!comments && !loading" class="error">
+  No results at the moment. Please try later.
 </div>
+<div layout="row" layout-sm="column" layout-align="space-around" ng-show="!comments && loading">
+  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+<md-button class="md-raised md-warn" ng-href="#/posts">
+  <md-icon>keyboard_arrow_left</md-icon>
+</md-button>
