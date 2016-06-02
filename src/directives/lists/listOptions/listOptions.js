@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var template = fs.readFileSync(__dirname + '/list.html', 'utf8');
+var template = fs.readFileSync(__dirname + '/listOptions.html', 'utf8');
 
 var ListDirective = function () {
   return {
@@ -15,5 +15,5 @@ var ListDirective = function () {
   };
 };
 
-angular.module('blog-ui').directive('simpleList', ListDirective);
+angular.module('blog-ui').directive('listOptions', ListDirective);
 module.exports = ListDirective;

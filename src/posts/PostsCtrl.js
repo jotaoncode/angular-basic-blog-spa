@@ -16,14 +16,14 @@ function PostsCtrl ($scope, $location, postsService, authService) {
     console.log(err);
   });
 
+  authService.getSession().then(function (session) {
+    $scope.userName = session;
+  });
+  
   $scope.createPost = function (event) {
     event.preventDefault();
     $location.path('posts/create');
   };
-
-  authService.getSession().then(function (session) {
-    $scope.userName = session;
-  });
 
   $scope.headerOptions = [{
     click : function (event) {

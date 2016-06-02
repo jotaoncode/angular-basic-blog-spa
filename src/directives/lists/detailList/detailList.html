@@ -1,0 +1,8 @@
+<div ng-repeat="item in details" class="{{styled}}">
+  <div layout="row" layout-align="space-between center" class="title">
+    <div ng-repeat="detail in item.detailList">
+      <span class="{{detail.styled}}">{{detail.name}}</span> {{detail.text}}
+    </div>
+  </div>
+  <div class="body">{{item.body}}</div>
+</div>

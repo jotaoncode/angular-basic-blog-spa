@@ -1,3 +1,4 @@
 angular.module('blog-ui', []);
-require('./lists/simpleList');
+require('./lists/listOptions/listOptions');
+require('./lists/detailList/detailList');
 require('./headers/simpleHeader');

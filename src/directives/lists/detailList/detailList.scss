@@ -1,0 +1,14 @@
+.basic {
+  margin: 10px;
+  border-bottom: 1px solid #ddd;
+  .title {
+    margin-bottom: 10px;
+    .bold-description {
+      font-weight: 600;
+    }
+  }
+  .body {
+    padding-left: 5px;
+    padding-bottom: 10px;
+  }
+}

@@ -7,17 +7,7 @@
     {{post.body}}
   </p>
   <h2>Comments</h2>
-  <div ng-repeat="comment in comments" class="comment">
-    <div layout="row" layout-align="space-between center" class="title-comment">
-      <div class="name">
-        <span class="description">Subject: </span> {{comment.name}}
-      </div>
-      <div class="email">
-        {{comment.email}}
-      </div>
-    </div>
-    <div class="body">{{comment.body}}</div>
-  </div>
+  <detail-list details="comments" styled="basic"></detail-list>
 </div>
 <div ng-if="!comments && !loading" class="error">
   No results at the moment. Please try later.
