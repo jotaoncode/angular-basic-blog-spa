@@ -4,6 +4,7 @@
 global._ = require('lodash');
 global.moment = require('moment');
 require('moment/min/locales');
+global.$ = global.jquery = require('jquery');
 require('angular');
 require('angular-route');
 require('angular-resource');
