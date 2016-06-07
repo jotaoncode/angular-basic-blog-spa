@@ -59,6 +59,13 @@ module.exports = {
     dest: dest + "/assets/images"
   },
   /**
+   * Templates
+   */
+  templates: {
+    src: src + "/**/*.tmpl.html",
+    dest: dest
+  },
+  /**
    * Markup
    */
   markup: {

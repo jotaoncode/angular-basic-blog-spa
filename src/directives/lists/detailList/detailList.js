@@ -1,11 +1,11 @@
 var fs = require('fs');
 
-var template = fs.readFileSync(__dirname + '/detailList.html', 'utf8');
+//var template = fs.readFileSync(__dirname + '/detailList.html', 'utf8');
 
 var ListDirective = function () {
   return {
     restrict: 'E',
-    template: template,
+    templateUrl: 'directives/lists/detailList/detailList.tmpl.html',
     scope: {
       details: "=",
       list: "=",

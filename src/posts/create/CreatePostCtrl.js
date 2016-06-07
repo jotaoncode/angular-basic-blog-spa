@@ -1,5 +1,5 @@
 function CreatePostCtrl ($scope, $location, postsService) {
-  
+
   $scope.title = "";
   $scope.description = "";
 

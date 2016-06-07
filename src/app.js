@@ -1,11 +1,13 @@
 /**
  * Templates
  */
-var fs = require('fs');
-var posts = fs.readFileSync(__dirname + '/posts/posts.html', 'utf8');
+//var fs = require('fs');
+//var posts = fs.readFileSync(__dirname + '/posts/posts.html', 'utf8');
+/*
 var login = fs.readFileSync(__dirname + '/login/login.html', 'utf8');
 var postDetail = fs.readFileSync(__dirname + '/posts/details/postDetail.html', 'utf8');
 var createPost = fs.readFileSync(__dirname + '/posts/create/newPost.html', 'utf8');
+*/
 
 require('./directives/uiBlog');
 require('./services/blogCore');
@@ -20,7 +22,8 @@ angular.module('Blog', [
   'login',
   'posts',
   'blog-ui',
-  'blog-core'
+  'blog-core',
+  'partials'
 ]).config(function ($routeProvider) {
   function checkLoggedInUser (authService, $q, $location) {
     var def = $q.defer();
@@ -37,25 +40,25 @@ angular.module('Blog', [
   $routeProvider
   .when('/', {
     controller: 'LoginCtrl',
-    template: login
+    templateUrl: 'login/login.tmpl.html'
   })
   .when('/posts', {
     controller: 'PostsCtrl',
-    template: posts,
+    templateUrl: 'posts/posts.tmpl.html',
     resolve: {
       checkLoggedInUser: ['authService', '$q', '$location', checkLoggedInUser]
     }
   })
   .when('/posts/create', {
     controller: 'CreatePostCtrl',
-    template: createPost,
+    templateUrl: 'posts/create/newPost.tmpl.html',
     resolve: {
       checkLoggedInUser: ['authService', '$q', '$location', checkLoggedInUser]
     }
   })
   .when('/posts/:post', {
     controller: 'PostDetail',
-    template: postDetail,
+    templateUrl: 'posts/details/postDetail.tmpl.html',
     resolve: {
       checkLoggedInUser: ['authService', '$q', '$location', checkLoggedInUser]
     }

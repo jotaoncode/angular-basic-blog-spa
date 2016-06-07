@@ -1,11 +1,11 @@
 var fs = require('fs');
 
-var template = fs.readFileSync(__dirname + '/welcome.html', 'utf8');
+//var template = fs.readFileSync(__dirname + '/welcome.html', 'utf8');
 
 var ListDirective = function () {
   return {
     restrict: 'E',
-    template: template,
+    templateUrl: 'directives/animations/welcome.tmpl.html',
     scope: {
       styled: "@"
     },

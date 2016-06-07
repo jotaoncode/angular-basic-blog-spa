@@ -1,11 +1,11 @@
 var fs = require('fs');
 
-var template = fs.readFileSync(__dirname + '/header.html', 'utf8');
+//var template = fs.readFileSync(__dirname + '/header.html', 'utf8');
 
 var HeaderDirective = function () {
   return {
     restrict: 'E',
-    template: template,
+    templateUrl: 'directives/headers/header.tmpl.html',
     scope: {
       user: "=",
       options: "="
