@@ -71,6 +71,7 @@
   },
   "scripts": {
     "generate-doc": "./node_modules/doxx/bin/doxx -s src/js -T docs",
-    "server": "node ./node_modules/jsonplaceholder/index.js"
+    "server": "node ./node_modules/jsonplaceholder/index.js",
+    "generate-diagram": "dependo -f cjs -x \"(/node_modules/)\" src/ > diagram.html"
   }
 }
