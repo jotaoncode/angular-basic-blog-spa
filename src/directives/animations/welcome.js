@@ -1,4 +1,8 @@
-var ListDirective = function () {
+/**
+ * @module Welcome
+ * @description A simple animation of welcome. Done with svg, and animating the stroke.
+ */
+var WelcomeDirective = function () {
   return {
     restrict: 'E',
     templateUrl: 'directives/animations/welcome.tmpl.html',
@@ -36,5 +40,5 @@ var ListDirective = function () {
   };
 };
 
-angular.module('blog-ui').directive('welcome', ListDirective);
+angular.module('blog-ui').directive('welcome', WelcomeDirective);
 module.exports = ListDirective;
