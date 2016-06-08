@@ -1,7 +1,3 @@
-var fs = require('fs');
-
-//var template = fs.readFileSync(__dirname + '/header.html', 'utf8');
-
 var HeaderDirective = function () {
   return {
     restrict: 'E',

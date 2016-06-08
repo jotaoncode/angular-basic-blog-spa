@@ -1,7 +1,3 @@
-var fs = require('fs');
-
-//var template = fs.readFileSync(__dirname + '/welcome.html', 'utf8');
-
 var ListDirective = function () {
   return {
     restrict: 'E',
@@ -11,7 +7,7 @@ var ListDirective = function () {
     },
     controller: function () {
       var delay = 0,
-      speed
+      speed,
       welcome = $('#welcome'),
       paths = $('.welcome svg path, circle, rect');
 

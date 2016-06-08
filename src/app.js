@@ -1,14 +1,3 @@
-/**
- * Templates
- */
-//var fs = require('fs');
-//var posts = fs.readFileSync(__dirname + '/posts/posts.html', 'utf8');
-/*
-var login = fs.readFileSync(__dirname + '/login/login.html', 'utf8');
-var postDetail = fs.readFileSync(__dirname + '/posts/details/postDetail.html', 'utf8');
-var createPost = fs.readFileSync(__dirname + '/posts/create/newPost.html', 'utf8');
-*/
-
 require('./directives/uiBlog');
 require('./services/blogCore');
 

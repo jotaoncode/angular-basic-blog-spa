@@ -1,7 +1,3 @@
-var fs = require('fs');
-
-//var template = fs.readFileSync(__dirname + '/detailList.html', 'utf8');
-
 var ListDirective = function () {
   return {
     restrict: 'E',
