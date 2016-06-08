@@ -9,4 +9,5 @@ gulp.task('watch', ['browser-sync'], function () {
   gulp.watch(config.sass.srcWatch, ['sass']);
   gulp.watch(config.images.src, ['images']);
   gulp.watch(config.markup.src, ['markup']);
+  gulp.watch(config.templates.src, ['html2js']);
 });
