@@ -1,10 +1,7 @@
 function LoginCtrl ($scope, $location, authService) {
   $scope.userName = "";
-  function isValid () {
-    return $scope.userName;
-  }
   $scope.login = function () {
-    if (isValid()) {
+    if (authService.isValidUserCredential($scope.userName)) {
       authService.saveSession($scope.userName).then(function () {
         $location.path('/posts');
       });

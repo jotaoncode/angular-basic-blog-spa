@@ -8,6 +8,9 @@ function authService($localForage) {
     logOut: function () {
       return $localForage.removeItem(localDB);
     },
+    isValidUserCredential: function (userName) {
+      return !!userName;
+    },
     getSession: function () {
       return $localForage.getItem(localDB);
     }
