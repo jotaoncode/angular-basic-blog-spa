@@ -119,7 +119,8 @@
         "_",
         "module",
         "$",
-        "angular"
+        "angular",
+        "global"
     ],
     "indent"        : 4         // Specify indentation spacing
 }
