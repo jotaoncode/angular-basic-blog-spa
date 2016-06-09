@@ -9,10 +9,12 @@ function PostDetail($scope, postsService, commentsService, $q) {
         detailList: [{
           name: 'Subject',
           text: detail.name,
-          styled: 'bold-description'
+          styled: 'bold-description',
+          isText: true
         }, {
-          name: 'Email',
-          text: detail.email
+          text: detail.email,
+          isMail: true,
+          href: detail.email
         }],
         body: detail.body
       };

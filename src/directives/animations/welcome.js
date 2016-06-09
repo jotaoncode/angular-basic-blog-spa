@@ -41,4 +41,4 @@ var WelcomeDirective = function () {
 };
 
 angular.module('blog-ui').directive('welcome', WelcomeDirective);
-module.exports = ListDirective;
+module.exports = WelcomeDirective;

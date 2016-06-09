@@ -1,7 +1,9 @@
 <div ng-repeat="item in details" class="{{styled}}">
   <div layout="row" layout-align="space-between center" class="title">
     <div ng-repeat="detail in item.detailList">
-      <span class="{{detail.styled}}">{{detail.name}}</span> {{detail.text}}
+      <span ng-if="detail.name" class="{{detail.styled}}">{{detail.name}}</span>
+      <span ng-if="detail.isText">{{detail.text}}</span>
+      <a ng-if="detail.isMail" href="mailto:{{detail.href}}">{{detail.text}}</a>
     </div>
   </div>
   <div class="body">{{item.body}}</div>
